@@ -1,0 +1,699 @@
+:root {
+    --main-color : #03045E ;
+    --other-color : #F39422 ;
+    --open-blue-color : #00e2ff ;
+    --main-font : 'Parisienne', cursive ;
+    --other-font : 'Catamaran', sans-serif ;
+    --main-transition : 0.5s ease-in-out ;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(0,2,161);
+    background: linear-gradient(0deg, rgba(0,2,161,1) 68%, var(--main-color));
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--other-color);
+    font-family: var(--other-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 80px;
+}
+
+section {
+    padding: 80px 0;
+    margin:0 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section h3 {
+    font-size: 3rem;
+    color: var(--other-color);
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+
+/* Start Scroll bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner{
+    background-color: #000000;
+}
+
+/* Scrolling */
+
+/* Start Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    min-height: 60px;
+    z-index: 100;
+    transition: var(--main-transition);
+}
+
+.header {
+    background-color: rgba(0,2,161,1);
+    box-shadow: 0 0 100px 5px black;
+    
+}
+
+header .logo  h1{
+    font-size: 1.8rem;
+    font-family: var(--main-font);
+    margin: 10px;
+    display: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+
+header nav #logoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+
+header nav #logoList span {
+    position: relative;
+    margin: 3px;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+    transition: var(--main-transition);
+}
+
+header nav #logoList .i1 {
+    width: 12.5px;
+}
+
+header nav #logoList .i3 {
+    width: 12.5px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header nav ul li a {
+    font-size: 1.2rem;
+    color: var(--open-blue-color);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+header nav ul li a i {
+    margin: 0 5px 0 0;
+}
+
+header nav ul li a:hover {
+    background-color: var(--other-color);
+    color: var(--main-color);
+}
+
+@media (max-width : 767px) {
+    .list {
+        height: 300px !important;
+    }
+
+    .span {
+        width: 25px !important;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .logo  h1{
+        display: block;
+    }
+
+    header nav #logoList {
+        display: flex;
+    }
+    header nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        height: 0;
+        background-color: #03055ef3;
+        z-index: 100;
+    }
+    header nav ul li a:hover{
+        background-color: transparent;
+        color: var(--open-blue-color);
+    }
+}
+
+/* End Header */
+
+/* Start landing */
+
+.Welcoming {
+    position: absolute;
+    direction: rtl;
+    width: 100%;
+    padding: 100px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: -1;
+}
+
+.Welcoming .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Welcoming .text h2 {
+    font-size: 3rem;
+    font-family: var(--main-font);
+    color: var(--other-color);   
+}
+
+.Welcoming .text p {
+    font-size: 1.3rem;
+    font-family: var(--main-font);
+    color: var(--open-blue-color);
+}
+
+
+.image {
+    padding: 80px 10px;
+    position: absolute;
+    width: auto;
+    z-index: 10;
+}
+
+.image img {
+    width: 350px;
+}
+
+@media (max-width: 767px) {
+    .Welcoming {
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 10px;
+    }
+    .Welcoming .text {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .Welcoming .text h2 {
+        font-size: 1.8rem;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        padding: 0;
+    }
+
+    .image img {
+        margin: 30px 20px 0 0;
+        width: 200px;
+    }
+}
+
+.lightBottom {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(0,2,161);
+    background: linear-gradient(0deg, rgba(0,2,161,1) 0%, rgba(3,4,94,0) 100%);
+}
+
+
+@media (max-width : 450px ) {
+    .Welcoming .text p {
+        font-size: 1.2rem;
+    }
+
+    .image img {
+        width: 150px;
+        z-index: 10px;
+    }
+}
+
+@media (max-width : 340px ) {
+    .Welcoming .text p {
+        font-size: 1.2rem;
+    }
+    
+    .image {
+        margin-top: 100px;
+    }
+    .image img {
+        width: 100px;
+        z-index: 10px;
+    }
+}
+/* End landing */
+
+/* Start Skills section */
+
+#Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#Skills h3 {
+    font-size: 3rem;
+    color: var(--other-color);
+    font-family: var(--main-font);
+}
+
+#Skills .ConterSkills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+#Skills .ConterSkills .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(90% / 3);
+    min-width: 200px;
+    min-height: 150px;
+    margin: 20px 10px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    background-color: #0062db75;
+    transition: var(--main-transition);
+}
+
+#Skills .ConterSkills .skill:hover {
+    background-color: #00a1ff94;
+}
+
+
+#Skills .ConterSkills .skill img {
+    margin: 10px;
+    padding: 10px;
+    transition: var(--main-transition);
+    width: 100px;
+}
+
+#Skills .ConterSkills .skill:hover img {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    border: 10px solid var(--other-color);
+    padding: 5px;
+}
+
+
+#Skills .ConterSkills .skill h4 {
+    padding: 10px;
+    color: var(--open-blue-color);
+    font-family: var(--other-font);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+@media (max-width : 450px) {
+    #Skills .ConterSkills .skill {
+        width: 100%;
+    }
+}
+/* End Skills section */
+
+/* Start Certs Section */
+
+.certs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#Certs .resum {
+    font-size: 1.4rem;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    left: 50%;
+}
+
+.cert {
+    min-width: 200px;
+    width: calc(90% / 3);
+    margin: 20px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+}
+
+.cert img {
+    width: 100%;
+    height: 100%;    
+}
+
+
+@media (max-width : 760px) {
+    .certs .cert {
+        width: calc(90% / 2);
+    }
+}
+
+
+@media (max-width : 530px) {
+    .certs .cert {
+        width: 100%;
+    }
+}
+
+/* End Certs Section */
+
+/* Start Projects Section */
+
+.projects {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.project {
+    position: relative;
+    min-width: 280px;
+
+    width: calc(90% / 3);
+    margin: 20px 10px;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    perspective: 1500px;
+}
+
+.front {
+    transition: var(--main-transition);
+    backface-visibility: hidden;
+    min-width: 270px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #0062db75;
+    border-radius: 10px;
+}
+
+.front img {
+    min-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.back {
+    position: absolute;
+    transition: var(--main-transition);
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #0062db75;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.project:hover .front {
+    transform: rotateY(180deg);
+}
+
+.project:hover .back {
+    transform: rotateY(0deg);
+    background-color: #00a1ff94;
+}
+
+.back h5 {
+    font-size: 1.5rem;
+    font-family: var(--other-font);
+    font-weight: 600;
+    color: #03045E;
+}
+
+.back p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.back a {
+    padding: 5px ;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #00e2ff;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+
+.back a:hover {
+    background-color: var(--other-color);
+    color: var(--main-color);
+}
+
+#Projects .resum {
+    font-size: 1.4rem;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    left: 50%;
+}
+
+@media (max-width : 450px ) {
+    .project .front{
+        height: 170px;
+    }
+}
+
+/* End Projects Section */
+
+/* Start Contact Section */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.contact h4 {
+    font-size: 1.6rem;
+    text-align: center;
+    max-width: 90%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 40px 0 0 0;
+    background-color: #0062db75;
+}
+
+.contact form label {
+    font-size: 1.8rem;
+    margin: 10px 0 0 0;
+    color: var(--open-blue-color);
+}
+
+.contact form input,
+.contact form textarea {
+    position: relative;
+    width: 80%;
+    padding: 10px 5px;
+    margin: 0 0 50px 0 ;
+    line-height: 1.4;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: var(--other-font);
+    color: var(--open-blue-color);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    border: 1px solid #0062db75;
+    transition: var(--main-transition);
+}
+
+.contact form textarea {
+    height: 200px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    background-color: #0004fd2f;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--open-blue-color) ;
+}
+
+.contact form button {
+    font-size: 1.4rem;
+    color: var(--open-blue-color);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--main-color);
+    font-family: var(--main-font);
+    cursor: pointer;
+    left: 50%;
+    border: none;
+    transition: var(--main-transition);
+}
+
+.contact form button:hover {
+    background-color: #0003ca;
+}
+
+.contact .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#Contact .social ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Contact .social ul li {
+    margin: 5px;
+}
+
+#Contact .social ul li img {
+    width: 40px;
+    transition: var(--main-transition);
+}
+
+#Contact .social ul li:hover img {
+    margin-top: 20px;
+}
+
+
+@media (max-width : 450px) {
+    .contact form {
+        width: 95%;
+    }
+
+    .contact form label {
+        font-size: 1.2rem;
+    }
+}
+
+/* End Contact Section */

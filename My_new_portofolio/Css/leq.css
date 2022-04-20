@@ -1,0 +1,28 @@
+
+body{
+    margin:0px;
+}
+canvas{
+    margin-left:-40px;
+}
+/* span{
+    height:7px;
+    width:20px;
+    display:inline-block;
+    cursor:pointer;  
+    position:absolute;
+    top:0px;
+            transition: height 0.2s;
+        -o-transition: height 0.2s;	
+        -moz-transition: height 0.2s;	
+    -webkit-transition: height 0.2s;	
+
+} */
+span:hover{
+    height:12px;
+}
+
+#container{
+    width:100%;
+    overflow: hidden;
+}
